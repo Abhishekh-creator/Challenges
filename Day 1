@@ -1,4 +1,4 @@
-
+TASK #1
  const capitalizeFirstWord = (s) => {
  const a = s.split(" ");
  
@@ -8,8 +8,19 @@
    }
     return a.join(" ");
 };
-
 const s = 'london is the capital of Great Britain.'
-
 console.log(capitalizeFirstWord(s));
+
+TASK #2
+ const shorten = (s, n) => {
+   if(s.length > n) {
+       return s.slice(0,n) + "..."
+   }else{
+     return s.slice(0, n);
+   }
+};
+const longString = 'this string is quite long, especially for its age.'
+const shortString = 'a short one' 
+console.log(shorten(longString, 20));
+console.log(shorten(shortString, 20)); 
 
