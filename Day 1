@@ -1,0 +1,15 @@
+
+ const capitalizeFirstWord = (s) => {
+ const a = s.split(" ");
+ 
+  for(let i=0;i<a[0][0].length;i++){
+   a[i] = a[i].charAt(0).toUpperCase() + a[i].substring(1) ;
+     console.log(a[0])
+   }
+    return a.join(" ");
+};
+
+const s = 'london is the capital of Great Britain.'
+
+console.log(capitalizeFirstWord(s));
+
