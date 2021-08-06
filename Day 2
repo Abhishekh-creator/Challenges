@@ -22,12 +22,11 @@ console.log(extractNumber('agdflhwet galsdf 13245 sdflgkhytaol chalsdf'));
  "It should return `true` if `text` contains any of the `spamKeywords`, otherwise - `false`.",
 **/
 
-// Two ways to do it but both are case sensitive .
+
 
 a) const array1= ['a', 'b', 'x', 'z'];
 const array2= ['A', 'x', 'c'] 
   
-
 function findCommonElements3(arr1, arr2) {
     return arr1.some((item) => arr2.includes(item))
 }
@@ -40,7 +39,7 @@ const spamMail = 'Hey, JOHN! YoU woN 1000 tabS of ViaGrA ! ! ! ! ';
 const spamKeywords = ['viagra', 'lottery', 'won', 'prize', 'prince'];
 
 const checkSpam = (text, spamKeywords) => {
-  const arr = text.split(" ");
+  const arr = text.toLowerCase.split(" ");
  for(let i = 0; i < arr.length; i++){
    
   for(let J = 0; J < spamKeywords.length; J++){
