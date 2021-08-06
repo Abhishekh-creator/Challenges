@@ -13,3 +13,49 @@ console.log(extractNumber('$59.99'));
 console.log(extractNumber('EUR 1.35'));
 console.log(extractNumber('1 BTC'));
 console.log(extractNumber('agdflhwet galsdf 13245 sdflgkhytaol chalsdf'));
+
+
+// Task #4
+/**
+ "Implement the function checkSpam(text, spamKeywords).",
+ "",
+ "It should return `true` if `text` contains any of the `spamKeywords`, otherwise - `false`.",
+**/
+
+// Two ways to do it but both are case sensitive .
+
+a) const array1= ['a', 'b', 'x', 'z'];
+const array2= ['A', 'x', 'c'] 
+  
+
+function findCommonElements3(arr1, arr2) {
+    return arr1.some((item) => arr2.includes(item))
+}
+
+console.log(findCommonElements3(array1,array2));
+
+
+b) const friendlyChat = 'Hey, John! Any update on the upcoming trip?';
+const spamMail = 'Hey, JOHN! YoU woN 1000 tabS of ViaGrA ! ! ! ! ';
+const spamKeywords = ['viagra', 'lottery', 'won', 'prize', 'prince'];
+
+const checkSpam = (text, spamKeywords) => {
+  const arr = text.split(" ");
+ for(let i = 0; i < arr.length; i++){
+   
+  for(let J = 0; J < spamKeywords.length; J++){
+  
+    if(arr[i] === spamKeywords[J]){
+      return true;
+     };
+   }
+ };
+  return false;
+};
+const friendlyChat = 'Hey, John! Any update on the upcoming trip?';
+const spamMail = 'Hey, JOHN! YoU woN 1000 tabS of ViaGrA ! ! ! ! ';
+const spamKeywords = ['viagra', 'lottery', 'won', 'prize', 'prince'];
+
+console.log(checkSpam(friendlyChat, spamKeywords));
+console.log(checkSpam(spamMail, spamKeywords));
+
