@@ -1,4 +1,7 @@
-TASK #1
+// TASK #1 Capitalize Each Word.
+// Implement the function capitalizeEachWord(s).
+// It should accept a string, turn the first letter of each word to uppercase and return the result.
+
  const capitalizeFirstWord = (s) => {
  const a = s.split(" ");
  
@@ -11,7 +14,8 @@ TASK #1
 const s = 'london is the capital of Great Britain.'
 console.log(capitalizeFirstWord(s));
 
-TASK #2
+// TASK #2 It should add "..." in the in the end if characters ar more than 20.
+
  const shorten = (s, n) => {
    if(s.length > n) {
        return s.slice(0,n) + "..."
