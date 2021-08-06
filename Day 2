@@ -1,0 +1,15 @@
+// Task #3 Extract a number
+
+// Implement the function extractNumber(s).
+// It should accept a string and extract a number from it.
+// It's guaranteed that there will be a single number in the string.
+// Examples: $59.99 -> 59.99, 99 euro only! -> 99, 1 BTC -> 1
+
+export const extractNumber = (s) => {
+  var number = s.replace(/[^\d\.]*/g, '');
+  return  Number(number);
+};
+console.log(extractNumber('$59.99'));
+console.log(extractNumber('EUR 1.35'));
+console.log(extractNumber('1 BTC'));
+console.log(extractNumber('agdflhwet galsdf 13245 sdflgkhytaol chalsdf'));
