@@ -1,3 +1,6 @@
+// 1.)  Implement the function divideBy(divisor).
+// It should accept a divisor and return a function that takes the number n, divides it by the divisor and returns the the result.
+
 const multiplyBy = (x) => {
   return (y) => {
     return x * y;
